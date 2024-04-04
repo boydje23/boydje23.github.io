@@ -4,7 +4,7 @@ a {
 }
 
 a:hover {
-  text-decoration: bold;
+  font-weight: bold;
 }
 
  .loader{
@@ -43,6 +43,178 @@ a:hover {
   }
 }
 
+.navbar ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow:hidden;
+  position: fixed;
+  z-index: 1; /* set higher z-index value */
+}
+.navbar a{
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a:hover{
+  background-color:hsl(0,0%,10%);
+
+}
+.navbar li{
+  float: left;
+}
+.wrapper1{
+  width: 100%;
+  padding: 20%;
+  box-sizing: border-box;
+  position: relative; /* Required for absolute positioning */
+}
+.img1{
+  top:-300px;
+  transform: scale(25%,25%);
+  position: absolute;
+  transition: left 1s ease; /* Smooth transition for left property */
+  z-index: 0; /* set higher z-index value */
+}
+
+.img2{
+  top:-300px;
+  transform: scale(25%,25%);
+  position: absolute;
+  transition: left 1s ease; /* Smooth transition for left property */
+  z-index: 0; /* set higher z-index value */
+}
+.img3{
+  top:-300px;
+  transform: scale(25%,25%);
+  position: absolute;
+  transition: left 1s ease; /* Smooth transition for left property */
+  z-index: 0; /* set higher z-index value */
+}
+.img4{
+  top:-300px;
+  transform: scale(25%,25%);
+  position: absolute;
+  transition: left 1s ease; /* Smooth transition for left property */
+  z-index: 0; /* set higher z-index value */
+}
+.img5{
+  top:-300px;
+  transform: scale(25%,25%);
+  position: absolute;
+  transition: left 1s ease; /* Smooth transition for left property */
+  z-index: 0; /* set higher z-index value */
+}
+.img6{
+  top:-300px;
+  transform: scale(25%,25%);
+  position: absolute;
+  transition: left 1s ease; /* Smooth transition for left property */
+  z-index: 0; /* set higher z-index value */
+}
+
+
+ Define a keyframe animation for spawning in
+@keyframes spawn1-in {
+  0% {
+    transform: scale(25%,25%) translateX(0px) translateY(0px);
+  }
+  25%{
+    transform: scale(25%,25%) translateX(0px) translateY(-300px);
+
+  }
+  100% {
+    transform:  scale(25%,25%) translateX(0px) translateY(1000px); /* Final state: full size and at original position */
+  }
+}
+@keyframes spawn2-in {
+  0% {
+    transform: scale(25%,25%) translateX(0px) translateY(10px);;
+  }
+  40%{
+    transform: scale(25%,25%) translateX(0px) translateY(-300px);
+  }
+  100% {
+    transform:  scale(25%,25%) translateX(-2000px) translateY(-1000px); /* Final state: full size and at original position */
+  }
+}
+@keyframes spawn3-in {
+  0% {
+    transform: scale(25%,25%) translateX(0px) translateY(400px);;
+  }
+  50%{
+    transform: scale(25%,25%) translateX(0px) translateY(-300px);
+    opacity: 0.0;
+  }
+  100% {
+    transform:  scale(25%,25%) translateX(2000px) translateY(-1000px); /* Final state: full size and at original position */
+  }
+}
+@keyframes spawn4-in {
+  0% {
+    transform: scale(25%,25%) translateX(0px) translateY(0px);;
+  }
+  25%{
+    transform: scale(25%,25%) translateX(0px) translateY(-300px);
+    opacity: 0.0;
+  }
+  100% {
+    transform:  scale(25%,25%) translateX(-2000px) translateY(1000px); /* Final state: full size and at original position */
+  }
+}
+@keyframes spawn5-in {
+  0% {
+    transform: scale(25%,25%) translateX(0px) translateY(0px);;
+  }
+  30%{
+    transform: scale(25%,25%) translateX(0px) translateY(-300px);
+    opacity: 0.0;
+  }
+  100% {
+    transform:  scale(25%,25%) translateX(2000px) translateY(1000px); /* Final state: full size and at original position */
+  }
+}
+@keyframes spawn6-in {
+  0% {
+    transform: scale(25%,25%) translateX(0px) translateY(0px);;
+  }
+  35%{
+    transform: scale(25%,25%) translateX(0px) translateY(-300px);
+    opacity: 0.5;
+  }
+  100% {
+    transform:  scale(25%,25%) translateX(0px) translateY(-1000px); /* Final state: full size and at original position */
+  }
+}
+
+/* Apply the animation to the image */
+.img1.spawn1 {
+  animation: spawn1-in 2s ease forwards; /* Play the animation and retain the final state */
+  animation-delay: 1.3s; /* Add a delay of 1 second */
+}
+.img2.spawn2 {
+  animation: spawn2-in 2s ease forwards; /* Play the animation and retain the final state */
+  animation-delay: 1s; /* Add a delay of 1 second */
+
+}
+.img3.spawn3 {
+  animation: spawn3-in 2s ease forwards; /* Play the animation and retain the final state */
+  animation-delay: 3s; /* Add a delay of 1 second */
+}
+.img4.spawn4 {
+  animation: spawn4-in 2s ease forwards; /* Play the animation and retain the final state */
+  animation-delay: 4s; /* Add a delay of 1 second */
+}
+.img5.spawn5 {
+  animation: spawn5-in 2s ease forwards; /* Play the animation and retain the final state */
+  animation-delay: 5s; /* Add a delay of 1 second */
+}
+.img6.spawn6 {
+  animation: spawn6-in 2s ease forwards; /* Play the animation and retain the final state */
+  animation-delay: 6s; /* Add a delay of 1 second */
+}
 
 /* This section is for the spinning words!*/
 *,
@@ -93,7 +265,10 @@ a:hover {
   font-size: 40px;
   font-weight:500;
 }
-
+.section-one{
+  max-width: 1000px;
+  top: -200px;
+}
 
 .mapper{
   position: absolute;
@@ -168,21 +343,57 @@ a:hover {
 }
 section {
   position:sticky;
-  position:-webkit-sticky;
-  top: 0;
-  padding:30px;
-  min-height:50vh;
+  min-height: 150vh;
+
+
 }
 #section-two {
   background-color: #444;
-  margin: 20px auto;
+  margin: 40px auto;
   max-width: 1000px;
   line-height: 1.5;
   font-size: 16px;
   padding: 0 10px;
   font-family: 'Open Sans', sans-serif;
+  top: -200px;
+
 }
 
+#section-three{
+  background-color: #444;
+  margin: 20px auto;
+  max-width: 1000px;
+  line-height: 1.5;
+  font-size: 30px;
+  padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+  top: -500px;
+
+}
+
+
+#section-four{
+  background-color: #444;
+  margin: 20px auto;
+  max-width: 1000px;
+  line-height: 1.5;
+  font-size: 30px;
+  padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+  top: -200px;
+}
+
+
+#section-five{
+  background-color: #444;
+  margin: 20px auto;
+  max-width: 1000px;
+  line-height: 1.5;
+  font-size: 30px;
+  padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+  top: -200px;
+}
 .bio{
   margin: 20px auto;
   max-width: 1000px;
@@ -190,6 +401,7 @@ section {
   font-size: 16px;
   padding: 0 10px;
   font-family: 'Open Sans', sans-serif;
+  top: -200px;
 }
 
 .bio img{
