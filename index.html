@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title> INSERT YOUR NAME</title>
+  <title> Jason Boyd </title>
 
-  <meta name="author" content="INSERT YOUR NAME">
-  <meta name="keywords" content="FIRST NAME, LAST NAME,Wake Forest,Computer,Science">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wht@500&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href = "stylesheet.css">
+
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+
+
+  <meta name="author" content="Jason Boyd">
+  <meta name="keywords" content="Jason, Boyd,Wake Forest,Computer,Science,Psychology">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=INSERT-YOUR-ID"></script>
@@ -19,33 +26,95 @@
     gtag('js', new Date());
 
     gtag('config', 'INSERT-YOUR-ID');
+
+    window.addEventListener("load", () =>{
+        document.querySelector(".loader").classList.remove("loader-active");
+    });
   </script>
+
 </head>
 
 <body>
-  <div class="intro container">
-    <div class="bio">
-      <p><img src="images/FIRST_LAST.jpg" alt="INSERT A PICTURE OF YOU" class="center_circle"></p>
-      <h1>FIRST-NAME LAST NAME</h1>
-      <p> I'm a X year CS student at <a href="https://cs.wfu.edu/">Wake Forest</a>. MORE EXPLANATION OF WHO YOU ARE AND WHAT YOU ARE INTERESTED IN</p>
 
-      <p> MORE INFORMATION ABOUT YOU, IF NEEDED</p>
+<div class = "loader loader-active" ></div>
 
-      <p>You can reach me at <a href="mailto:YOUREMAIL@wfu.edu">email</a>. </p>
 
-      <span class="contact">
-        <a href="YOUR LINKEDIN LINK">LinkedIn</a> &nbsp/&nbsp
-        <a href="YOUR GITHUB LINK">Github</a>
+<!--<section id="section-one">-->
+<!--    <p><img src="images/IMG_1078.jpg" alt="INSERT A PICTURE OF YOU" class="transform"></p>-->
+<!--</section>-->
+
+
+
+<section id="section-two">
+
+  <p><img src="images/IMG_9673.jpeg" alt="INSERT A PICTURE OF YOU" class="profile"></p>
+  <!--      <h1 class = "name">Jason Boyd</h1>-->
+  <p class = "intro"> I'm a first year computer science and psychology student at <a href="https://cs.wfu.edu/">Wake Forest</a>.</p>
+
+  <p class = "intro"> Hello there! My name is Jason, and I'm a 19-year-old with big dreams and an insatiable thirst for knowledge. Born and raised in the bustling metropolis of New York City, I've always been surrounded by the energy of innovation and possibility.
+
+    Currently, I'm pursuing a double major in Computer Science and Psychology, driven by a fascination with both the intricate workings of the human mind and the limitless potential of technology. Whether it's coding complex algorithms or delving into the depths of psychological theories, I thrive on the challenge of understanding and problem-solving.
+
+    Beyond the confines of the classroom, you'll often find me on the tennis court, where I unleash my competitive spirit and channel my love for the game. Tennis isn't just a sport for me; it's a way to push my limits, stay disciplined, and cultivate a winning mindset.
+
+    But my interests don't stop there. I'm also a puzzle enthusiast, relishing the mental workout they provide and the satisfaction of piecing together solutions. And when I'm not exercising my mind, I'm out in nature, hitting the trails for a run, hike, or mountain biking adventure. There's something about the great outdoors that rejuvenates my spirit and fuels my sense of adventure.
+
+    In everything I do, whether it's academics, sports, or leisure activities, my ambition is unwavering. I see each day as an opportunity to learn, grow, and make a positive impact on the world around me. With a curious mind, a determined spirit, and a love for life's challenges, I'm ready to take on whatever the future holds. You can reach me at <a href="mailto:boydje23@wfu.edu">email</a>. </p>
+
+  <div class = "wrapper" >
+    <p class = "run">Coding is </p>
+    <div class ="words">
+      <span class = "fun"> fantastic</span>
+      <span class = "fun">interesting</span>
+      <span class = "fun">amazing</span>
+      <span class = "fun">awesome</span>
+      <span class = "fun">incredible</span>
+    </div>
+  </div>
+
+  <div class = "mapper" >
+    <div class ="tords">
+      <span class = "time"> Jason Boyd</span>
+      <span class = "time"> Jason Boyd</span>
+      <span class = "time"> Jason Boyd</span>
+      <span class = "time"> Jason Boyd</span>
+      <span class = "time"> Jason Boyd</span>
+    </div>
+  </div>
+
+    <span class="contact">
+        <a href="https://www.linkedin.com/in/jason-e-boyd/">LinkedIn</a> &nbsp/&nbsp
+        <a href="https://github.com/boydje23">Github</a>
       </span>
-      <br>
+    <br>
+
+</section>
+
+
+
+
 
       <h1>Projects</h1>
-      <p><img src="images/first_project.jpg" alt="INSERT RELEVANT PICTURE" class="center_circle"></p>
-      <p> DESCRIPTION OF THE PROJECT AND YOUR INVOLVEMENT</p>
-      <p> ACKNOWLEDGMENT OF OTHERS/ORGANIZATION</p>
-      <p> <a href="GITHUB PROJECT LINK">GitHub Project Link</a> </p>
+      <p><img src="images/Tic-Tac-Toe.png" alt="tic tac toe image" class="projects_photo" width="100px" height="10px"></p>
+      <p><img src="images/Screenshot 2024-04-02 at 6.47.19 PM.png" alt="tic tac toe image" class="tic-tac-toe-photo"></p>
+      <p> Project Description:</p>
+      <p>The Java Tic Tac Toe Game with GUI is a classic implementation of the popular Tic Tac Toe game built using Java programming language.
+        The game provides an intuitive graphical user interface (GUI) that allows players to interact with the game board and play against each other.</p>
       <br>
-      
+      <p>Key Features: </P>
+      <p> Graphical User Interface (GUI): The game features a visually appealing GUI built using Java Swing components, providing a user-friendly interface for players to interact with.</P>
+      <br>
+      <p> Player vs Player Mode: Players can compete against each other in a local multiplayer mode, taking turns to make their moves on the game board.</P>
+      <br>
+      <p>Dynamic Game Board: The game board dynamically updates to reflect the moves made by players, providing real-time feedback and visual representation of the game progress.</P>
+      <br>
+      <p>Win Detection: The game includes win detection algorithms to determine when a player has achieved victory by forming a line of three consecutive symbols (X or O) horizontally, vertically, or diagonally on the game board.</P>
+      <br>
+      <p>Draw Detection: If all cells on the game board are filled without either player achieving victory, the game detects a draw and prompts players to start a new game.</p>
+      <br>
+      <p> <a href="https://github.com/boydje23/tik-tac-toe-game">GitHub Project Link</a> </p>
+      <br>
+
 
       <h1>Experience</h1>
       <h3> POSITION @ ORGANIZATION DATES</h3>
@@ -56,7 +125,7 @@
       <h3 style="color: #cfb53b;">WAKE</h3>
       <ul>
         <li> CSC 112 (Fundamentals of Computer Science), SEMESTER TAKEN. </li>
-        <li> CSC 111 (Introduction to Computer Science), SEMESTER TAKEN. </li> 
+        <li> CSC 111 (Introduction to Computer Science), SEMESTER TAKEN. </li>
       </ul>
     </div>
   </div>
