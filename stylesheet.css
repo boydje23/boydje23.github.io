@@ -43,28 +43,49 @@ a:hover {
   }
 }
 
-.navbar ul{
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-  overflow:hidden;
-  position: fixed;
-  z-index: 1; /* set higher z-index value */
-}
-.navbar a{
-  color: white;
-  text-decoration: none;
-  padding: 15px;
-  display: block;
-  text-align: center;
-}
-.navbar a:hover{
-  background-color:hsl(0,0%,10%);
 
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  margin: 0px;
+  padding: 0px;
 }
-.navbar li{
+
+/* Navbar links */
+#navbar a {
   float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  list-style-type: none;
 }
+#navbar a:hover{
+  background-color: #444444;
+}
+#navbar ul{
+  list-style-type: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
 .wrapper1{
   width: 100%;
   padding: 20%;
@@ -76,7 +97,7 @@ a:hover {
   transform: scale(25%,25%);
   position: absolute;
   transition: left 1s ease; /* Smooth transition for left property */
-  z-index: 0; /* set higher z-index value */
+  z-index: 4; /* set higher z-index value */
 }
 
 .img2{
@@ -84,28 +105,28 @@ a:hover {
   transform: scale(25%,25%);
   position: absolute;
   transition: left 1s ease; /* Smooth transition for left property */
-  z-index: 0; /* set higher z-index value */
+  z-index: 6; /* set higher z-index value */
 }
 .img3{
   top:-300px;
   transform: scale(25%,25%);
   position: absolute;
   transition: left 1s ease; /* Smooth transition for left property */
-  z-index: 0; /* set higher z-index value */
+  z-index: 5; /* set higher z-index value */
 }
 .img4{
   top:-300px;
   transform: scale(25%,25%);
   position: absolute;
   transition: left 1s ease; /* Smooth transition for left property */
-  z-index: 0; /* set higher z-index value */
+  z-index: 3; /* set higher z-index value */
 }
 .img5{
   top:-300px;
   transform: scale(25%,25%);
   position: absolute;
   transition: left 1s ease; /* Smooth transition for left property */
-  z-index: 0; /* set higher z-index value */
+  z-index: 2; /* set higher z-index value */
 }
 .img6{
   top:-300px;
@@ -116,13 +137,14 @@ a:hover {
 }
 
 
- Define a keyframe animation for spawning in
+
 @keyframes spawn1-in {
   0% {
     transform: scale(25%,25%) translateX(0px) translateY(0px);
   }
   25%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
+    opacity: 0.6%;
 
   }
   100% {
@@ -146,7 +168,7 @@ a:hover {
   }
   50%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
-    opacity: 0.0;
+    opacity: 0.6%;
   }
   100% {
     transform:  scale(25%,25%) translateX(2000px) translateY(-1000px); /* Final state: full size and at original position */
@@ -158,7 +180,7 @@ a:hover {
   }
   25%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
-    opacity: 0.0;
+    opacity: 0.6%;
   }
   100% {
     transform:  scale(25%,25%) translateX(-2000px) translateY(1000px); /* Final state: full size and at original position */
@@ -168,9 +190,9 @@ a:hover {
   0% {
     transform: scale(25%,25%) translateX(0px) translateY(0px);;
   }
-  30%{
+  15%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
-    opacity: 0.0;
+    opacity: 0.6%;
   }
   100% {
     transform:  scale(25%,25%) translateX(2000px) translateY(1000px); /* Final state: full size and at original position */
@@ -180,9 +202,9 @@ a:hover {
   0% {
     transform: scale(25%,25%) translateX(0px) translateY(0px);;
   }
-  35%{
+  10%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
-    opacity: 0.5;
+    opacity: 0.6%;
   }
   100% {
     transform:  scale(25%,25%) translateX(0px) translateY(-1000px); /* Final state: full size and at original position */
@@ -201,19 +223,19 @@ a:hover {
 }
 .img3.spawn3 {
   animation: spawn3-in 2s ease forwards; /* Play the animation and retain the final state */
-  animation-delay: 3s; /* Add a delay of 1 second */
+  animation-delay: .9s; /* Add a delay of 1 second */
 }
 .img4.spawn4 {
   animation: spawn4-in 2s ease forwards; /* Play the animation and retain the final state */
-  animation-delay: 4s; /* Add a delay of 1 second */
+  animation-delay: 1.4s; /* Add a delay of 1 second */
 }
 .img5.spawn5 {
   animation: spawn5-in 2s ease forwards; /* Play the animation and retain the final state */
-  animation-delay: 5s; /* Add a delay of 1 second */
+  animation-delay: 1.6s; /* Add a delay of 1 second */
 }
 .img6.spawn6 {
   animation: spawn6-in 2s ease forwards; /* Play the animation and retain the final state */
-  animation-delay: 6s; /* Add a delay of 1 second */
+  animation-delay: 1.8s; /* Add a delay of 1 second */
 }
 
 /* This section is for the spinning words!*/
@@ -230,7 +252,7 @@ a:hover {
 .wrapper{
   position: absolute;
   top: 100px;
-  left: -250px;
+  left: -0px;
   box-sizing: content-box;
   height: 70px;
   padding: 50px 30px;
@@ -265,15 +287,11 @@ a:hover {
   font-size: 40px;
   font-weight:500;
 }
-.section-one{
-  max-width: 1000px;
-  top: -200px;
-}
 
 .mapper{
   position: absolute;
   top: 100px;
-  right: -100px;
+  right: 100px;
   box-sizing: content-box;
   height: 70px;
   padding: 50px 30px;
@@ -344,25 +362,31 @@ a:hover {
 section {
   position:sticky;
   min-height: 150vh;
-
-
 }
+
+#section-one{
+  max-width: 1000px;
+  top: -150px;
+  bottom: 300px;
+}
+
 #section-two {
   background-color: #444;
   margin: 40px auto;
-  max-width: 1000px;
   line-height: 1.5;
   font-size: 16px;
   padding: 0 10px;
   font-family: 'Open Sans', sans-serif;
   top: -200px;
-
+}
+.section-two-text{
+  margin-right: 250px;
+  margin-left: 250px;
 }
 
 #section-three{
   background-color: #444;
   margin: 20px auto;
-  max-width: 1000px;
   line-height: 1.5;
   font-size: 30px;
   padding: 0 10px;
@@ -375,7 +399,6 @@ section {
 #section-four{
   background-color: #444;
   margin: 20px auto;
-  max-width: 1000px;
   line-height: 1.5;
   font-size: 30px;
   padding: 0 10px;
@@ -387,7 +410,6 @@ section {
 #section-five{
   background-color: #444;
   margin: 20px auto;
-  max-width: 1000px;
   line-height: 1.5;
   font-size: 30px;
   padding: 0 10px;
