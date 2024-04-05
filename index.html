@@ -1,60 +1,75 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title> Jason Boyd </title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wht@500&display=swap" rel="stylesheet">
+    <script>
+        /* Open when someone clicks on the span element */
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wht@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
-  <link rel = "stylesheet" href = "stylesheet.css">
+    <link rel = "stylesheet" href = "stylesheet.css">
+    <link rel = "stylesheet" href="stylesheet.js">
 
 
 
 
 
-  <meta name="author" content="Jason Boyd">
-  <meta name="keywords" content="Jason, Boyd,Wake Forest,Computer,Science,Psychology">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jason Boyd">
+    <meta name="keywords" content="Jason, Boyd,Wake Forest,Computer,Science,Psychology">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=INSERT-YOUR-ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=INSERT-YOUR-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'INSERT-YOUR-ID');
+        gtag('config', 'INSERT-YOUR-ID');
 
-    window.addEventListener("load", () =>{
-        document.querySelector(".loader").classList.remove("loader-active");
-    });
-  </script>
+        window.addEventListener("load", () =>{
+            document.querySelector(".loader").classList.remove("loader-active");
+        });
+    </script>
 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
+
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="images/picture10.png" class = "logo" alt=""></span>
+
 <div class = "loader loader-active" ></div>
-
-
-<!--<section id="section-one">-->
-<!--    <p><img src="images/IMG_1078.jpg" alt="INSERT A PICTURE OF YOU" class="transform"></p>-->
-<!--</section>-->
 
 
 <section id="section-one">
 
-    <nav id = "navbar">
-        <ul>
-            <li> <a href = "#section-two"> Intro </a></li>
-            <li> <a href = "#section-three"> Projects </a></li>
-            <li> <a href = "#section-four"> Experience </a></li>
-            <li> <a href = "#section-five"> Course Work </a></li>
-        </ul>
-    </nav>
 
 <div class =" wrapper1">
     <p><img src="images/IMG_1078.jpg" alt="INSERT A PICTURE OF YOU" class="img1 spawn1 move-right"></p>
@@ -72,7 +87,6 @@
 
 
   <p><img src="images/IMG_9673.jpeg" alt="INSERT A PICTURE OF YOU" class="profile"></p>
-  <!--      <h1 class = "name">Jason Boyd</h1>-->
     <div class = "section-two-text">
         <p class = "intro"> I'm a first year computer science and psychology student at <a href="https://cs.wfu.edu/">Wake Forest</a>.</p>
         <p class = "intro"> Hello there! My name is Jason, and I'm a 19-year-old with big dreams and an insatiable thirst for knowledge. Born and raised in the bustling metropolis of New York City, I've always been surrounded by the energy of innovation and possibility.
@@ -101,9 +115,6 @@
 
   <div class = "mapper" >
     <div class ="tords">
-      <span class = "time"> Jason Boyd</span>
-      <span class = "time"> Jason Boyd</span>
-      <span class = "time"> Jason Boyd</span>
       <span class = "time"> Jason Boyd</span>
       <span class = "time"> Jason Boyd</span>
     </div>
