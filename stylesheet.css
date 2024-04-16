@@ -7,6 +7,10 @@ a:hover {
   font-weight: bold;
 }
 
+.logo{
+  z-index: 200;
+}
+
  .loader{
    position: fixed;
    top: 0;
@@ -46,12 +50,36 @@ a:hover {
 body {
   font-family: 'Lato', sans-serif;
 }
+/*.chicken {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: -100%; !* Initially position off-screen *!*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background-color: rgba(0, 0, 0, 0.9);*/
+/*  transition: left 0.5s ease; !* Apply transition to left property *!*/
+/*  z-index: 1000;*/
+/*}*/
+
+/*@keyframes moveChicken {*/
+/*  0% {*/
+/*    transform: translateX(0%) ;*/
+/*  }*/
+/*  100% {*/
+/*    transform:  translateX(-100%) ; !* Final state: full size and at original position *!*/
+/*  }*/
+/*}*/
+
+/*.chicken.spawn7 {*/
+/*  animation: spawn1-in .1s ease forwards; !* Play the animation and retain the final state *!*/
+/*  animation-delay: 2s; !* Add a delay of 1 second *!*/
+/*}*/
 
 .overlay {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   background-color: rgb(0,0,0);
@@ -66,6 +94,7 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 30px;
+  z-index: 100;
 }
 
 .overlay a {
@@ -75,6 +104,7 @@ body {
   color: #818181;
   display: block;
   transition: 0.3s;
+  z-index: 100;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -146,8 +176,28 @@ body {
   transition: left 1s ease; /* Smooth transition for left property */
   z-index: 0; /* set higher z-index value */
 }
+.img7{
+  top:0px;
+  position: absolute;
+  z-index: 20;
+  opacity: 0%;
+}
+.img8{
+  position: absolute;
+  z-index: 30;
+  opacity: 0%;
+  right: auto;
+  left: 150px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 400px;
+  font-family: "Poppins",sans-serif;
+}
 
-
+.logo1{
+  background-color: #f192c9;
+}
 
 @keyframes spawn1-in {
   0% {
@@ -164,7 +214,7 @@ body {
 }
 @keyframes spawn2-in {
   0% {
-    transform: scale(25%,25%) translateX(0px) translateY(10px);;
+    transform: scale(25%,25%) translateX(0px) translateY(10px);
   }
   40%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
@@ -175,7 +225,7 @@ body {
 }
 @keyframes spawn3-in {
   0% {
-    transform: scale(25%,25%) translateX(0px) translateY(400px);;
+    transform: scale(25%,25%) translateX(0px) translateY(400px);
   }
   50%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
@@ -187,7 +237,7 @@ body {
 }
 @keyframes spawn4-in {
   0% {
-    transform: scale(25%,25%) translateX(0px) translateY(0px);;
+    transform: scale(25%,25%) translateX(0px) translateY(0px);
   }
   25%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
@@ -199,7 +249,7 @@ body {
 }
 @keyframes spawn5-in {
   0% {
-    transform: scale(25%,25%) translateX(0px) translateY(0px);;
+    transform: scale(25%,25%) translateX(0px) translateY(0px);
   }
   15%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
@@ -211,7 +261,7 @@ body {
 }
 @keyframes spawn6-in {
   0% {
-    transform: scale(25%,25%) translateX(0px) translateY(0px);;
+    transform: scale(25%,25%) translateX(0px) translateY(0px);
   }
   10%{
     transform: scale(25%,25%) translateX(0px) translateY(-300px);
@@ -219,6 +269,22 @@ body {
   }
   100% {
     transform:  scale(25%,25%) translateX(0px) translateY(-1000px); /* Final state: full size and at original position */
+  }
+}
+@keyframes spawn7-in {
+    100% {
+      opacity: 70%;
+      transform:  scale(2.8,6) translateY(68px); /* Final state: full size and at original position */
+    }
+}
+@keyframes spawn8-in {
+  0% {
+    transform:  scale(0%) translateX(0%);
+    opacity: 0%;
+  }
+  100% {
+    transform:   scale3d(100%,100%,100%); /* Final state: full size and at original position */
+    opacity: 100%;
   }
 }
 
@@ -247,6 +313,20 @@ body {
 .img6.spawn6 {
   animation: spawn6-in 2s ease forwards; /* Play the animation and retain the final state */
   animation-delay: 1.8s; /* Add a delay of 1 second */
+
+}
+.img7.spawn7 {
+  animation: spawn7-in .1s ease forwards; /* Play the animation and retain the final state */
+  animation-delay: 2s; /* Add a delay of 1 second */
+  z-index: 60;
+}
+
+.img8.spawn8 {
+  animation: spawn8-in .1s ease forwards; /* Play the animation and retain the final state */
+  -webkit-transition: ease-in;
+  animation-delay: 2.2s; /* Add a delay of 1 second */
+  z-index: 60;
+
 }
 
 /* This section is for the spinning words!*/
@@ -382,7 +462,7 @@ section {
 }
 
 #section-two {
-  background-color: #444;
+  background-color:  #181818;
   margin: 40px auto;
   line-height: 1.5;
   font-size: 16px;
@@ -396,19 +476,23 @@ section {
 }
 
 #section-three{
-  background-color: #444;
+  background-color: #181818;
   margin: 20px auto;
   line-height: 1.5;
   font-size: 30px;
   padding: 0 10px;
   font-family: 'Open Sans', sans-serif;
   top: -500px;
-
+}
+.section-three-text{
+  margin-right: 250px;
+  margin-left: 250px;
 }
 
 
+
 #section-four{
-  background-color: #444;
+  background-color: #181818;
   margin: 20px auto;
   line-height: 1.5;
   font-size: 30px;
@@ -416,7 +500,10 @@ section {
   font-family: 'Open Sans', sans-serif;
   top: -200px;
 }
-
+.section-four-text{
+  margin-right: 250px;
+  margin-left: 250px;
+}
 
 #section-five{
   background-color: #444;
@@ -457,27 +544,6 @@ section {
   width: 100%;
 }
 
-
-
-
-/*.overlay {*/
-/*  position: fixed;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  background-color: rgba(0, 0, 0, 0.5); !* Change the alpha value to adjust transparency *!*/
-/*  animation: moveOverlay 2s linear forwards; !* Apply animation only once *!*/
-/*}*/
-
-/*@keyframes moveOverlay {*/
-/*  0% {*/
-/*    transform: translateX(0);*/
-/*  }*/
-/*  100% {*/
-/*    transform: translateX(100%);*/
-/*  }*/
-/*}*/
 
 .profile {
   position: relative;
@@ -528,7 +594,7 @@ section {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #444;
+    background-color: #181818;
     color: #e4e4e4;
   }
   img {
