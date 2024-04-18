@@ -512,7 +512,7 @@ section {
 }
 
 #section-three{
-  background-color: #181818;
+  background: content-box radial-gradient(#675c5c, black);
   margin: 20px auto;
   line-height: 1.5;
   font-size: 30px;
@@ -540,7 +540,7 @@ section {
 }
 
 #section-five{
-  background-color: #181818;
+  background: content-box radial-gradient(#675c5c, black);
   margin: 20px auto;
   line-height: 1.5;
   font-size: 30px;
@@ -548,6 +548,11 @@ section {
   font-family: 'Open Sans', sans-serif;
   top: -200px;
 }
+.section-five-text {
+  margin-right: 250px;
+  margin-left: 250px;
+}
+
 .bio{
   margin: 20px auto;
   max-width: 1000px;
